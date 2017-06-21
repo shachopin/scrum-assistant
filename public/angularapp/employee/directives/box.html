@@ -1,0 +1,28 @@
+<div class="col-xs-4 box">
+  <h3>
+    <div class="row">
+      <div class="col-xs-4"><span class="label label-default">{{vm.title}}</span></div>  
+       <div class="col-xs-6"></div>
+       <div class="col-xs-2" style="position: relative; right: -3%;"><span class="badge">{{vm.items.length}}</span></div>  
+    </div>
+  </h3>
+  <div ng-class="['panel', {'panel-danger': item.priority === 1, 'panel-warning': item.priority === 2, 'panel-info': item.priority === 3}]" ng-repeat="item in vm.items">
+    <div class="panel-heading" style="height:35px">
+      <div class="dropdown">  <!--for dropdown to work, need bootstrap.js-->
+        <span class="glyphicon glyphicon-export pull-right" style="cursor:pointer;margin-left:10px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" ></span>
+        <ul class="dropdown-menu dropdown-menu-right">  
+          <!--li class="dropdown-header">Transfer to a member</li-->
+          <li class="disabled"><a href="">Transfer to a member</a></li>
+          <li role="separator" class="divider"></li>
+          <li ng-repeat="member in vm.members"><a href="" ng-click="vm.assignTodo(item, member.$id)">{{member.$id}}</a></li>
+        </ul>
+       </div>
+       <span class="glyphicon glyphicon-remove pull-right" style="cursor:pointer;margin-left:10px" ng-click="vm.deleteItem(item)"></span>
+       <span class="glyphicon glyphicon-arrow-right pull-right" style="cursor:pointer;margin-left:10px" ng-click="vm.moveRight(item)" ng-show="vm.rightitems"></span>
+       <span class="glyphicon glyphicon-arrow-left pull-right" style="cursor:pointer" ng-click="vm.moveLeft(item)" ng-show="vm.leftitems"></span>
+    </div>
+    <div class="panel-body" style="word-break:break-all;height:48px;overflow-y:scroll;">
+      <pre id="pre" title="{{item.title}}">{{item.title}}</pre>
+    </div>  
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div ng-show="vm.isScrumMaster" class="styled-select slate">
+  <!--Before it was select  ng-model="vm.member" ng-options="member for member in ['Dawei', 'Raymond', 'Ben']" ng-change="vm.handleOptionClick()" title="Members", and it works fine--> 
+  
+  <!--select  ng-model="vm.member" ng-options="member.$id for member in vm.members" ng-change="vm.handleOptionClick()" title="Members"-->
+  <!--the above way is good, but vm.member is still an object, but we want the value to be string -->
+  <select  ng-model="vm.member" ng-change="vm.handleOptionClick()" title="Members">
+    <option value="">Select a member</option> <!--always there in the two approaches -->
+    <option ng-repeat="member in vm.members" ng-value="member.$id">{{member.$id}}</option>
+  </select>
+</div>
+
+<dd-form items="vm.todos" member="vm.member"></dd-form>
+
+<div class="row">
+  <dd-box title="To Do" items="vm.todos" rightitems="vm.doings" members="vm.members"></dd-box>
+  <dd-box title="Doing" items="vm.doings" rightitems="vm.dones" leftitems="vm.todos" members="vm.members"></dd-box>
+  <dd-box title="Done" items="vm.dones" leftitems="vm.doings" members="vm.members"></dd-box> 
+</div>
+

@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scrum Assistant</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Bootstrap latest compiled and minified CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!--Optional theme-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    
+    <link rel="stylesheet" href="/style.css">
+   
+  </head>
+  <body ng-app="app">
+    <dd-navbar></dd-navbar>
+    <div ng-view class="container"></div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap core JS, only after jquery, because dependent on jquery -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.0/angular-route.js"></script>
+    <!--firebase related libraries -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDzY5hhvcCMUv5iFAc9jFAmlkJ6_-VTFU8",
+        authDomain: "gomix-meeting-schedule.firebaseapp.com",
+        databaseURL: "https://gomix-meeting-schedule.firebaseio.com",
+        projectId: "gomix-meeting-schedule",
+        storageBucket: "gomix-meeting-schedule.appspot.com",
+        messagingSenderId: "1076519130141"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <!--main app module-->
+    <script src="/angularapp/app.module.js"></script>
+    <!--employee items module-->
+    <script src="/angularapp/employee/items.module.js"></script>
+    <script src="/angularapp/employee/items.controller.js"></script>
+    <script src="/angularapp/employee/config.route.js"></script>
+    <script src="/angularapp/employee/directives/box.directive.js"></script>
+    <script src="/angularapp/employee/directives/form.directive.js"></script>
+    <!--auth module-->
+    <script src="/angularapp/auth/auth.module.js"></script>
+    <script src="/angularapp/auth/auth.controller.js"></script>
+    <script src="/angularapp/auth/config.route.js"></script>
+    <!--layout module-->
+    <script src="/angularapp/layout/layout.module.js"></script>
+    <script src="/angularapp/layout/navbar.directive.js"></script>
+    <!--landing module-->
+    <script src="/angularapp/landing/landing.module.js"></script>
+    <script src="/angularapp/landing/config.route.js"></script>
+   
+  </body>
+</html>
