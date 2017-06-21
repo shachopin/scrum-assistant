@@ -1,0 +1,24 @@
+<button ng-click="vm.toggleForm()" class="btn btn-success">
+  {{vm.showForm ? 'Cancel' : (vm.member ? 'Create a Todo For ' + vm.member : 'Create a Todo')}}
+</button>
+<!-- submit form todo list -->
+<form ng-show="vm.showForm" ng-submit="reviewForm.$valid && vm.addTodo()" name="reviewForm" novalidate>
+  <!--  Form -->
+  <!--h4>Create a Todo</h4-->
+  <h5></h5>
+  <fieldset class="form-group">
+    <select ng-model="vm.todo.priority" class="form-control" ng-options="priority for priority in [1,2,3]" title="Priority" required>
+      <option value="">Select Todo Priority</option>
+    </select>
+  </fieldset>
+  <fieldset class="form-group">
+    <textarea ng-model="vm.todo.title" class="form-control" placeholder="Write a short description of this todo..." title="Todo" required></textarea>
+  </fieldset>
+  <!--fieldset class="form-group">
+    <input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" required/>
+  </fieldset-->
+  <!--div>Form is valid? - {{reviewForm.$valid}}</div-->
+  <fieldset class="form-group">
+    <input type="submit" class="btn btn-primary pull-right" value="Create Todo" />
+  </fieldset>
+</form>
