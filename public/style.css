@@ -100,6 +100,72 @@ body {
 }
 /* register and login form end */
 
+/* for cool animateion svg start - tribute to https://codepen.io/shachopin/pen/BwZgXR */
+@font-face {
+	font-family: "GalanoGrotesqueW00-Bold";
+	src: url("https://static2.pickjb.com/assets/fonts/GalanoGrotesqueW00-Bold.eot");
+	src: local("Galano Grotesque W00 Bold"),
+		local("GalanoGrotesqueW00-Bold"),
+		url("https://static2.pickjb.com/assets/fonts/GalanoGrotesqueW00-Bold.eot?#iefix")
+			format("embedded-opentype"),
+		url("https://static2.pickjb.com/assets/fonts/GalanoGrotesqueW00-Bold.woff2")
+			format("woff2"),
+		url("https://static2.pickjb.com/assets/fonts/GalanoGrotesqueW00-Bold.woff")
+			format("woff"),
+		url("https://static2.pickjb.com/assets/fonts/GalanoGrotesqueW00-Bold.ttf")
+			format("truetype"),
+		url("https://static2.pickjb.com/assets/fonts/GalanoGrotesqueW00-Bold.svg#GalanoGrotesqueW00-Bold")
+			format("svg");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
 
 
+.waves {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	display: block;
+	min-width: 100%;
+	min-height: 70%;
+	margin: auto 0;
+}
 
+img {
+	pointer-events: none;
+}
+
+h1 {
+	position: relative;
+	top: 47%;
+	color: #000;
+	display: block;
+	font-family: "GalanoGrotesqueW00-Bold",
+		"MarkPro-Heavy",
+		"Pangram-ExtraBold",
+		"SFUIDisplay-Heavy",
+		"ProximaNova-Extrabld",
+		"AvenirNext-Bold",
+		"Wavehaus-158ExtraBold",
+		"Sailec-Bold",
+		"Europa-Bold",
+		"Roboto-Black",
+		"Affogato-Bold",
+		Arial,
+		sans-serif;
+	font-size: 12vmax;
+	font-weight: 800;
+	line-height: 1.2;
+	text-align: center;
+	margin: 0;
+	padding: 0 .2em;
+	transform: translateY(-53%);
+	font-display: swap;
+}
+
+.abovesvg{
+	position: relative;
+}
+/* for cool animateion svg end */
