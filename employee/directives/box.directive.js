@@ -7,12 +7,12 @@
 
   function ddBox() {
     return {
-      templateUrl: '/angularapp/employee/directives/box.html',
+      templateUrl: 'employee/directives/box.html',
       restrict: 'E',
       controller: BoxController,
       controllerAs: 'vm',
       bindToController: true, //without this, you have to use a $scope service in order to use parties in controller
-      //bindgToController ture will make the parties property directly in this controller as this
+      //bindgToController true will make the parties property directly in this controller as this
       //notice now the $scope.parties no longer work, also in directive, you cannot just directly use {{parties}}
       scope: {
         title: '@',

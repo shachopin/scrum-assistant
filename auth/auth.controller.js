@@ -7,10 +7,10 @@
   function AuthController($location, $firebaseAuth) {
     var vm = this;
     var firebaseAuthObject = $firebaseAuth();
-    vm.user = {
-      email: "",
-      password: ""
-    }
+    // vm.user = {  //not necessary.
+    //   email: "",
+    //   password: ""
+    // }
     vm.register = register;
     vm.login = login;
     vm.error = null;
@@ -40,7 +40,7 @@
     function login(user) {
       /*return*/ // no need to rturn as in the original code
       firebaseAuthObject.$signInWithEmailAndPassword(user.email, user.password)
-      .then(function(loggedInUser) {
+      .then(function(loggedInUser) { //here you can view displayName and photoURL inside loggedInUser object
         //console.log(loggedInUser);
         $location.path('/employee');
       })

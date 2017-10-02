@@ -9,10 +9,10 @@
   function configFunction($routeProvider) {
     //$routeProvider.when('/employee', {  //temporarily commented out
     $routeProvider.when('/employee', {
-      templateUrl: '/angularapp/employee/items.html',
+      templateUrl: 'employee/items.html',
       controller: 'ItemsController',
       controllerAs: 'vm',
-      resolve: {user: resolveUser}  //here the "user" can be used as a depdency for controller
+      resolve: {user: resolveUser}  //here the "user" can be used as a dependency for ItemsController
     });
   }
   

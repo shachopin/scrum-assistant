@@ -7,7 +7,7 @@
   
   function ddNavbar() {
     return {
-      templateUrl: '/angularapp/layout/navbar.html',
+      templateUrl: 'layout/navbar.html',
       restrict: 'E',
       scope: {},
       controller: NavbarController,
