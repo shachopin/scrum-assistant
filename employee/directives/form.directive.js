@@ -7,7 +7,7 @@
 
   function ddForm() {
     return {
-      templateUrl: '/angularapp/employee/directives/form.html',
+      templateUrl: 'employee/directives/form.html',
       restrict: 'E',
       controller: FormController,
       controllerAs: 'vm',

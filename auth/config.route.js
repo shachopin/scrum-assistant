@@ -8,12 +8,12 @@
   function configFunction($routeProvider) {
     $routeProvider
     .when('/register', {
-      templateUrl: '/angularapp/auth/register.html',
+      templateUrl: 'auth/register.html',
       controller: 'AuthController',
       controllerAs: 'vm'
     })
     .when('/login', {
-      templateUrl: '/angularapp/auth/login.html',
+      templateUrl: 'auth/login.html',
       controller: 'AuthController',
       controllerAs: 'vm'
     });
